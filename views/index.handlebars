@@ -1,29 +1,35 @@
-<h1>Eat-a-Burger</h1>
+<div class="wrapper">
 
-<form class="burgerForm">
-    <textarea name="content" id="content" cols="30" rows="10"></textarea>
-    <button>Submit</button>
-</form>
+    <h1>Eat-a-Burger</h1>
+    <img id="burgerImg" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimg1%2F1241302.png&f=1&nofb=1" alt="">
+    <form class="burgerForm">
+        {{!-- <textarea name="content" id="content" cols="30" rows="10"></textarea> --}}
+        <input type="text" name="content" id="content">
+        <button>Submit</button>
+    </form>
 
-<div class="showBurgers">
-    <div class="burgers">
-        <h3>Burgers</h3>
-        {{#each burger}}
-            {{#unless devoured}}
-                <div class="card">
-                    {{content}}
-                    <button class="devoureBtn" data-id="{{this.id}}" data-state="{{this.devoured}}">Devoure</button>
-                </div>
-            {{/unless}}
-        {{/each}}
-    </div>
-    <div class="devoured">
-        <h3>Burgers devoured</h3>
-        {{#each burger}}
-            {{#if devoured}}
-                {{content}}
-                <button class="devoureBtn" data-id="{{this.id}}" data-state="{{this.devoured}}">Devoure</button>
-            {{/if}}
-        {{/each}}
+    <div class="showBurgers">
+        <div class="section">
+            <h3>Burgers</h3>
+            {{#each burger}}
+                {{#unless devoured}}
+                    <div class="card">
+                        <span>{{content}}</span>
+                        <button class="devoureBtn" data-id="{{this.id}}" data-state="{{this.devoured}}">Devoure</button>
+                    </div>
+                {{/unless}}
+            {{/each}}
+        </div>
+        <div class="section">
+            <h3>Burgers devoured</h3>
+            {{#each burger}}
+                {{#if devoured}}
+                    <div class="card">
+                        <span>{{content}}</span>
+                        <button class="devoureBtn" data-id="{{this.id}}" data-state="{{this.devoured}}">Regurgitate</button>
+                    </div>
+                {{/if}}
+            {{/each}}
+        </div>
     </div>
 </div>

@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-yellow: #fcc000;
+    --color-red: #fe404a;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.showBurgers {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 10px;
+}
+
+.section {
+    margin: 5em;
+}
+
+.burgerForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.card{
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    background: var(--color-yellow);
+}
+
+button {
+    margin: 5px 0;
+    padding: 5px;
+    background: var(--color-red);
+    color: var(--color-yellow);
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+#burgerImg{ 
+    width: 200px;
+}
